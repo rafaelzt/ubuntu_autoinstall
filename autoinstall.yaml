@@ -1,0 +1,62 @@
+#cloud-config
+autoinstall:
+    version: 1
+    identity:
+        realname: 'Rafael Z Tanganelli'
+        hostname: taeko
+        username: rzt
+        password: '$y$j9T$ZV0T22oG2veDP570als7c/$3Q33Vmo4gaZJrk5dq4BDW9t6IQxkuc9w./cQuz7gR74'
+    locale: en_US.UTF-8
+    keyboard:
+        layout: us
+    timezone: "Europe/Madrid"
+    packages:
+        - wget
+        - curl
+        - tree
+        - vim
+        - clang
+        - make
+        - gdb
+        - pkgconf
+        - uidmap
+        - git
+        - gnome-shell-extensions
+        - rar
+        - unrar
+        - 7zip
+        - python3-pip
+        - libreadline-dev
+        - valgrind
+        - kcachegrind
+        - gstreamer1.0-plugins-bad
+        - ffmpeg
+        - intel-media-va-driver-non-free
+        - vlc
+        - vlc-plugin-access-extra
+        - vlc-l10n
+        - x264
+        - xorg
+        - libxext-dev
+        - zlib1g-dev
+        - libbsd-dev
+        - xdotool
+        - libxcursor-dev
+        - libx11-dev
+        - libxrandr-dev
+        - libxinerama-dev
+        - flatpak
+        - gnome-software-plugin-flatpak
+    snaps:
+        - name: gimp
+          channel: stable
+        - name: clion
+        - name: pycharm-professional
+        - name: dataspell
+        - name: rustrover
+    codecs:
+        install: true
+    drivers:
+        install: true
+    updates: all
+    shutdown: reboot
